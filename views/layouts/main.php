@@ -32,6 +32,7 @@ if (Yii::$app->controller->action->id === 'login') {
     <!DOCTYPE html>
     <html lang="<?= Yii::$app->language ?>">
     <head>
+        <link rel="shortcut icon" href="<?php echo Yii::$app->request->baseUrl ?>/tabsence.ico" type="image/x-icon"/>
         <meta charset="<?= Yii::$app->charset ?>"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?= Html::csrfMetaTags() ?>
