@@ -15,18 +15,17 @@ $config = [
     'components' => [
 //        'view' => [
 //            'theme' => [
-//                'pathMap' => [
-//                    '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/testing/app'
-//                ],
+//                'pathMap' => ['@app/views' => '@app/vendor/almasaeed2010/adminlte'],
+//                'baseUrl' => '@web/../vendor/almasaeed2010/adminlte',
 //            ],
 //        ],
-//        'assetManager' => [
-//            'bundles' => [
-//                'dmstr\web\AdminLteAsset' => [
-//                    'skin' => 'skin-red',
-//                ],
-//            ],
-//        ],
+        'assetManager' => [
+            'bundles' => [
+                'dmstr\web\AdminLteAsset' => [
+                    'skin' => 'skin-red',
+                ],
+            ],
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '5U9hNkqIVLmgcAUi7n8MuS65NIv6kDpk',
@@ -72,12 +71,12 @@ $config = [
 
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => 'yii\debug\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];
+//    $config['bootstrap'][] = 'debug';
+//    $config['modules']['debug'] = [
+//        'class' => 'yii\debug\Module',
+//        // uncomment the following to add your IP if you are not connecting from localhost.
+//        //'allowedIPs' => ['127.0.0.1', '::1'],
+//    ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [

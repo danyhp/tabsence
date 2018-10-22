@@ -21,11 +21,14 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+
+//        'adminlte/dist/css/AdminLTE.css'
     ];
     public $js = [
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
+        '\rmrevin\yii\ionicon\AssetBundle',
     ];
 }
