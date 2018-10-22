@@ -20,7 +20,8 @@ use frontend\assets\AppAsset;
                 'items' => [
                     ['label' => 'Menu', 'options' => ['class' => 'header']],
                     ['label' => 'Dashboard', 'icon' => 'dashboard', 'url' => ['/site/dashboard']],
-//                    ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
+                    ['label' => 'Data Pegawai', 'icon' => 'user', 'url' => ['/hrm-pegawai/index']],
+                    ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
 //                    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
                     ['label' => 'About', 'icon' => 'question-circle', 'url' => ['/site/about']],
                     ['label' => 'Contact', 'icon' => 'phone', 'url' => ['/site/contact']],

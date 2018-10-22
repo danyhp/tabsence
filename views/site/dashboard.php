@@ -8,11 +8,9 @@ $this->title = 'Dashboard';
 
 <div class="site-index">
 
-    <div class="body-content">
+    <div class="body-content box box-group">
 
         <section class="content">
-
-            <div class="row">
 
                 <div class="row">
                     <div class="col-lg-3 col-xs-6">
@@ -216,8 +214,6 @@ $this->title = 'Dashboard';
                     </div>
                 </div>
 
-
-            </div>
         </section>
     </div>
 
