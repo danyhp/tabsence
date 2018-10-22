@@ -11,7 +11,7 @@ use yii\data\ActiveDataProvider;
 class HrmPegawaiSearch extends HrmPegawai
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
@@ -23,7 +23,7 @@ class HrmPegawaiSearch extends HrmPegawai
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function scenarios()
     {
@@ -45,8 +45,7 @@ class HrmPegawaiSearch extends HrmPegawai
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
+            'query' => $query,        ]);
 
         $this->load($params);
 

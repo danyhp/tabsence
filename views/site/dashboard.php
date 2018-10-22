@@ -4,11 +4,12 @@
 
 //$this->title = Yii::$app->name;
 $this->title = 'Dashboard';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="site-index">
 
-    <div class="body-content box box-group">
+    <div class="body-content box box-primary">
 
         <section class="content">
 

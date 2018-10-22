@@ -15,7 +15,7 @@ use yii\web\NotFoundHttpException;
 class HrmPegawaiController extends Controller
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function behaviors()
     {
@@ -48,7 +48,6 @@ class HrmPegawaiController extends Controller
      * Displays a single HrmPegawai model.
      * @param string $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id)
     {
@@ -68,11 +67,11 @@ class HrmPegawaiController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id_pegawai]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
         }
-
-        return $this->render('create', [
-            'model' => $model,
-        ]);
     }
 
     /**
@@ -80,7 +79,6 @@ class HrmPegawaiController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param string $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionUpdate($id)
     {
@@ -88,11 +86,11 @@ class HrmPegawaiController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id_pegawai]);
+        } else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
         }
-
-        return $this->render('update', [
-            'model' => $model,
-        ]);
     }
 
     /**
@@ -100,7 +98,6 @@ class HrmPegawaiController extends Controller
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param string $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionDelete($id)
     {
@@ -120,8 +117,8 @@ class HrmPegawaiController extends Controller
     {
         if (($model = HrmPegawai::findOne($id)) !== null) {
             return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
         }
-
-        throw new NotFoundHttpException('The requested page does not exist.');
     }
 }
